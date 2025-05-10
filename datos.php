@@ -70,7 +70,7 @@
             </thead>
             <tbody>
                 <?php
-                  $sql = "SELECT * FROM clientes";
+                  $sql = "SELECT * FROM CLIENTE";
                   $result = $conn->query($sql);
 
                   if ($result === false) {
@@ -80,9 +80,9 @@
                   if ($result->num_rows > 0) {
                       while($row = $result->fetch_assoc()) {
                           echo "<tr>
-                            <td>{$row['razon_social']}</td>
-                            <td>{$row['descripcion']}</td>
-                            <td>{$row['email']}</td>
+                            <td>{$row['nif']}</td>
+                            <td>{$row['nombre']}</td>
+                            <td>{$row['apellidos']}</td>
                             <td>{$row['telefono']}</td>
                             </tr>";
                       }
